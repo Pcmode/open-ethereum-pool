@@ -270,11 +270,15 @@ Made by sammy007. Licensed under GPLv3.
 #### Contributors
 
 [Alex Leverington](https://github.com/subtly)
+
 [Jared Griego](https://github.com/Pcmode)
 
 ### Donations
 
 ETH: 0xb58bdfc4c7695e3a0efee0b809422f4f774fda4a
+
 Musicoin(MC):0x999d7d55723b4857fc43a6b7719ae7624c358ef0
+
 Musiconomi(MCI):0x3ac63b5cd650ec55e348dfa3af48af9e6bf1ea78
+
 BTC:1PLUFvVJnXCzMmcUZeCYL3J8DuyWd3nEER
