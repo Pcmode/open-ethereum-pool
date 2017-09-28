@@ -14,10 +14,6 @@
 * Separate stats for workers: can highlight timed-out workers so miners can perform maintenance of rigs
 * JSON-API for stats
 
-#### Proxies
-
-* [Ether-Proxy](https://github.com/sammy007/ether-proxy) HTTP proxy with web interface
-* [Stratum Proxy](https://github.com/Atrides/eth-proxy) for Ethereum
 
 ### Building on Linux
 
@@ -35,55 +31,12 @@ Dependencies:
 
 **I highly recommend to use Ubuntu 16.04 LTS.**
 
-First install  [go-ethereum](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
-
-Clone & compile:
-
-    git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/sammy007/open-ethereum-pool.git
-    cd open-ethereum-pool
-    make
-
-Install redis-server.
-
 ### Running Pool
 
     ./build/bin/open-ethereum-pool config.json
 
 You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>.
 
-### Building Frontend
-
-Install nodejs. I suggest using LTS version >= 4.x from https://github.com/nodesource/distributions or from your Linux distribution or simply install nodejs on Ubuntu Xenial 16.04.
-
-The frontend is a single-page Ember.js application that polls the pool API to render miner stats.
-
-    cd www
-
-Change <code>ApiUrl: '//example.net/'</code> in <code>www/config/environment.js</code> to match your domain name. Also don't forget to adjust other options.
-
-    npm install -g ember-cli@2.9.1
-    npm install -g bower
-    npm install
-    bower install
-    ./build.sh
-
-Configure nginx to serve API on <code>/api</code> subdirectory.
-Configure nginx to serve <code>www/dist</code> as static website.
-
-#### Serving API using nginx
-
-Create an upstream for API:
-
-    upstream api {
-        server 127.0.0.1:8080;
-    }
-
-and add this setting after <code>location /</code>:
-
-    location /api {
-        proxy_pass http://api;
-    }
 
 #### Customization
 
@@ -317,7 +270,11 @@ Made by sammy007. Licensed under GPLv3.
 #### Contributors
 
 [Alex Leverington](https://github.com/subtly)
+[Jared Griego](https://github.com/Pcmode)
 
 ### Donations
 
-ETH/ETC: 0xb85150eb365e7df0941f0cf08235f987ba91506a
+ETH: 0xb58bdfc4c7695e3a0efee0b809422f4f774fda4a
+Musicoin(MC):0x999d7d55723b4857fc43a6b7719ae7624c358ef0
+Musiconomi(MCI):0x3ac63b5cd650ec55e348dfa3af48af9e6bf1ea78
+BTC:1PLUFvVJnXCzMmcUZeCYL3J8DuyWd3nEER
